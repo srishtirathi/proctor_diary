@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Student Home Page</title>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="google-signin-client_id" content="1099177409116-huidmqdgqp0ued5caopv565ht9oj3nsn.apps.googleusercontent.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="css/shp.css">
+	<script>
+	function onSignIn(googleUser)
+	{
+		console.log('Logged in as: '+googleUser.getBasicProfile().getName());
+		window.location = "sdashboard.html"; 
+		
+	}
+	</script>
+</head>
+<body>
+	
+	
+	<div class="container-login100" style="background-image: url('background_bottom.gif');">
+		<img src="images/bms.jpeg" style="width: 150px;height: 150px; margin-left:0px;">
+		<h1 style="margin-left: 350px;">STUDENT LOGIN</h1>
+		<div class="wrap-login100">
+			<form class="login100-form validate-form">
+				<div style="font-size: 30px; margin-left: 60px;" id="top">
+						Sign In With Google
+				</div>
+
+				<div style="margin-left: 140px; margin-top: 30px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"
+				><button>GMAIL</button>
+				</div>		
+			</form>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>

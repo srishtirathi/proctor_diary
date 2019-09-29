@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proctor Info Form</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="1099177409116-huidmqdgqp0ued5caopv565ht9oj3nsn.apps.googleusercontent.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+  		function signOut() {
+    	document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/project/homepage.html";
+		  }
+	</script>
+
+</head>
+<body class="container-login100">
+	<img src="images/bms.jpeg" style="width: 150px;height: 150px; margin-left:0px; float: left">
+	<h1 style="margin-top: 50px;">PROCTOR INFORMATION</h1>
+	<a href="pdashboard.html"><img src="images/home.png" style=" width: 50px; margin-left: 250px;"></a>
+    <button type="button"  class="login100-form-btn" onclick="signOut();">SIGN OUT</button>
+	
+<form action="proctor_info.php" method="POST" align="center">
+	<h3 style="margin-left: 550px;" >Name:<input class="form-control" type="text" name="name" required><br><br>User Id: <input class="form-control"  type="text" name="user_id" required><br><br>
+	Address: <input class="form-control"  type="text" name="address" required><br><br>
+	Email-Id: <input class="form-control"  type="email" name="email_id" required><br><br>
+	Contact no.: <input class="form-control" type="number" pattern="/d{10}" name="contact_no" required><br><br>
+	Department: <input class="form-control" type="text" name="department" required><br><br>
+	Designation: <input class="form-control" type="text" name="designation" required><br><br>
+	Qualification: <input class="form-control" type="text" name="qualification" required><br><br>
+	Subjects Handled: <input class="form-control" type="text" name="subjects_handled" required><br><br></h3>
+	<input style="margin-left: 600px;" type="submit" id="submit" class="login100-form-btn" name="submit"></p>
+</form>
+</body>
+</html>

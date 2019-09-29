@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Info Form</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="1099177409116-huidmqdgqp0ued5caopv565ht9oj3nsn.apps.googleusercontent.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+  		function signOut() {
+    	document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/project/homepage.html";
+		  }
+	</script>
+	
+</head>
+<body class="container-login100" >
+	<img src="images/bms.jpeg" style="width: 150px;height: 150px; margin-left:0px; float: left">
+	<h1>STUDENT INFORMATION</h1>
+		<a href="sdashboard.html"><img src="images/home.png" style=" width: 50px; margin-left: 200px;"></a>
+    	<button type="button"  class="login100-form-btn" onclick="signOut();">SIGN OUT</button>
+    	
+	<form  action="student_info.php" method="POST">
+	<h3 >
+		<p>Name:   <input class="form-control" type="text" name="name" required><br></p>
+		<p>USN:    <input  class="form-control" pattern="^1BM\d{2}[A-Z]{2}\d{3}$" type="text" name="usn" required><br></p>
+		<p>Branch: <input  class="form-control" type="text" name="branch" required><br></p>
+		<p>Sem:    <input class="form-control" type="text" name="sem" required><br></p>
+		<p>DOB: <input class="form-control" type="text" name="dob" required><br></p>
+		<p>Email: <input class="form-control" type="email" name="email_id" required><br></p>
+		<p>Phone: <input class="form-control" type="number" pattern="[0-9]{10}" name="contact_no" required><br></p>
+		<p>Address: <input class="form-control" type="text" name="address" required><br></p>
+		<p>Father's Name: <input class="form-control" type="text" name="fathers_name" required><br></p>
+		<p>Father's Occupation: <input class="form-control" type="text" name="fathers_occupation" required><br></p>
+		<p>Father's No: <input class="form-control" pattern="[0-9]{10}" size="10" name="fathers_contact" required><br></p>
+		<p>Mother's Name:<input class="form-control" type="text" name="mothers_name" required><br></p>
+		<p>Mother's occupation: <input class="form-control" type="text" name="mothers_occupation" required><br></p>
+		<p>Mother's No: <input class="form-control" pattern="[0-9]{10}" size="10" name="mothers_contact" required><br></p>
+		<p>Accomodation: <input class="form-control" type="text" name="accomodation" required><br></p></h3>
+		<input id="submit" class="login100-form-btn" type="submit" name="submit" align="center"></p>
+
+
+	</form>
+</body>
+</html>

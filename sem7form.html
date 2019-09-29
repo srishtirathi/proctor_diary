@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SEM 7 FORM</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="1099177409116-huidmqdgqp0ued5caopv565ht9oj3nsn.apps.googleusercontent.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+  		function signOut() {
+    	document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/project/homepage.html";
+		  }
+	</script>
+</head>
+<body class="container-login100">
+	<img src="images/bms.jpeg" style="width: 150px;height: 150px; margin-left:0px; float: left">
+	<h1 style="margin-top: 50px;">STUDENT ACADEMIC DETAILS</h1>
+		<a href="sdashboard.html"><img src="images/home.png" style=" width: 50px; margin-left: 200px;"></a>
+    	<button type="button"  class="login100-form-btn" onclick="signOut();">SIGN OUT</button>
+    	
+	<form  action="sem7.php"  style="margin-top: 30px" method="POST">
+		<h3 style="font-size: 20px;" >USN: <input type="text" pattern="^1BM\d{2}[A-Z]{2}\d{3}$"class="form-control" name="usn" required><br><br>
+		Course Title: <input type="text" class="form-control"name="course_title" required><br><br>
+		Course Code: <input type="text" class="form-control" name="course_code" required><br><br>
+		Credits: <input type="number" class="form-control" name="credits" required><br><br>
+		Regular/Re-Register: <input type="text" class="form-control" name="re_register" required><br><br>
+		Attempt No: <input type="number" class="form-control" name="attempt_no" required><br><br>
+		Faculty: <input type="text" class="form-control" name="faculty" required><br><br>
+		Attendance: <input type="text" class="form-control" name="attendance" required><br><br>
+		CIE Marks: <input type="text" class="form-control" class="form-control" name="cie_marks" required><br><br>
+		SEE Grade: <input type="text" class="form-control" name="see_grade" required><br><br>
+		Grade Points: <input type="text" class="form-control" name="grade_points" required><br><br></h3>
+		<input id="submit" type="submit" class="login100-form-btn" name="submit"  id="submit">
+		
+	</form>
+</body>
+</html>

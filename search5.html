@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search</title>
+	<link rel="stylesheet" type="text/css" href="search.css">
+	<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+</head>
+<body>
+	<img src="bms.jpeg" style="width: 150px;height: 150px; margin-left:0px; float: left">
+	<a href="../sdashboard.html"><img src="home.png" style=" width: 50px; margin-left: 990px; float: left;"></a>
+	<a href="../homepage.html" onclick="signOut();"><button type="button"  class="login100-form-btn">SIGN OUT</button></a>
+	<img src="search.png" style="margin-left:420px; width:200px;">
+<form action = "sem5disp.php" method = "POST">
+<label>Enter USN to search for : <input type = "text" name = "search" />
+</label>
+<br />
+<input type = "submit" class="login100-form-btn" />
+</form>
+	</body>
+</html>
