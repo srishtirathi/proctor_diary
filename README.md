@@ -1,7 +1,4 @@
 # proctor_diary
-To make user friendly interface between student and proctor
-
-concepts used:
-HTML,CSS,PHP,JavaScript,SQL
-
-
+Tech Stack:HTML,CSS,PHP,JavaScript,SQL
+A website that helps students to maintain their personal and academic
+details and teachers can access details with proper authentication
